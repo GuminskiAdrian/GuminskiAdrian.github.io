@@ -14,12 +14,12 @@ function addNewTaskToList(task) {
 
   const editButton = document.createElement("input");
   editButton.setAttribute("type", "button");
-  editButton.setAttribute("value", "edit");
+  editButton.setAttribute("value", "Edit");
   editButton.classList.add("editButton");
 
   const deleteButton = document.createElement("input");
   deleteButton.setAttribute("type", "button");
-  deleteButton.setAttribute("value", "delete");
+  deleteButton.setAttribute("value", "Delete");
   deleteButton.classList.add("deleteButton");
   
   newTaskContainer.appendChild(newTask);
@@ -32,12 +32,14 @@ function addNewTaskToList(task) {
   });
 
   editButton.addEventListener('click', function(){
-    if(editButton.value == "edit"){
+    if(editButton.value == "Edit"){
       newTask.removeAttribute("readonly");
-      editButton.setAttribute("value", "save");
+      editButton.setAttribute("value", "Save");
+      newTask.style.backgroundColor = "rgb(175, 238, 186)";
     } else {
       newTask.setAttribute("readOnly", true);
-      editButton.setAttribute("value", "edit");
+      editButton.setAttribute("value", "Edit");
+      newTask.style.backgroundColor = "white"
     }
   });
 }

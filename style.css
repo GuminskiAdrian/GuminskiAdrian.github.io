@@ -75,10 +75,16 @@ h3 {
     width: max(30%, 80%);
 }
 
+.editButton,
+.deleteButton {
+    border-radius: 5px;
+    border: 1px dotted grey;
+}
+
 .editButton {
-    border: 1px solid blue;
+    background-color: rgb(125, 184, 231);
 }
 
 .deleteButton {
-    border: 1px solid yellow;
+    background-color: rgb(226, 144, 144);
 }
