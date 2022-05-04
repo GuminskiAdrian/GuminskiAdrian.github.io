@@ -59,6 +59,7 @@ save.addEventListener("click", function(){
     localStorage.setItem('taskNr'+j, tasks[j].value);
   }
 
+  alert("Your list has been saved");
 });
 
 reset.addEventListener("click", function(){

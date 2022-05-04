@@ -35,6 +35,7 @@ h1 {
 .inputs * {
     margin-inline: 1em;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 #taskInput {
@@ -49,12 +50,30 @@ h3 {
     text-align: center;
 }
 
+.taskList{
+    border: 1px solid red;
+    width: 80%;
+    text-align: center;
+}
+
 .newTaskContainer {
-    border: 1px solid purple;
+    width: 100%;
+    margin-block: 1em;
+}
+
+.newTaskContainer > input {
+    margin-inline: 1em;
+    font-size: 1em;
 }
 
 .newTask {
-    border: 1px solid green;
+    font-weight: 700;
+    border:none;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 30%;
+    overflow-wrap: break-word;
 }
 
 .editButton {
