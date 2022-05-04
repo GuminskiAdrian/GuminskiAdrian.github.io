@@ -66,12 +66,13 @@ h3 {
 }
 
 .newTask {
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     border:none;
     border-bottom: 1px solid gray;
     border-radius: 5px;
     text-align: center;
-    text-size-adjust: 50%;
+    width: max(30%, 80%);
 }
 
 .editButton {
