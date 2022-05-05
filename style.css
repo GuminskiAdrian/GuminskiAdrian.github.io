@@ -34,12 +34,12 @@ h1 {
 
 .inputs * {
     margin-inline: 1em;
-    border-radius: 5px;
     font-size: 1em;
 }
 
 #taskInput {
     width: 60%;
+    height: 1.5em;
 }
 
 h3 {
@@ -63,6 +63,14 @@ h3 {
 .newTaskContainer > input {
     margin-inline: 1em;
     font-size: 1em;
+    height: 1.5em;
+}
+
+.doneTask {
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: green;
+    background-color: rgb(66, 197, 66);
 }
 
 .newTask {
@@ -70,21 +78,12 @@ h3 {
     letter-spacing: 0.05em;
     border:none;
     border-bottom: 1px solid gray;
-    border-radius: 5px;
     text-align: center;
     width: max(30%, 80%);
 }
 
-.editButton,
-.deleteButton {
-    border-radius: 5px;
-    border: 1px dotted grey;
-}
-
-.editButton {
-    background-color: rgb(125, 184, 231);
-}
-
-.deleteButton {
-    background-color: rgb(226, 144, 144);
+.inputs > img,
+.newTaskContainer > img {
+    width: 2em;
+    height: 2em;
 }
