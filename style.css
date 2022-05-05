@@ -20,7 +20,6 @@ h1 {
     align-items: center;
     margin-inline: auto;
     width: 75vw;
-    border-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -35,6 +34,7 @@ h1 {
 .inputs * {
     margin-inline: 1em;
     font-size: 1em;
+    height: 1.5em;
 }
 
 #taskInput {
@@ -82,8 +82,15 @@ h3 {
     width: max(30%, 80%);
 }
 
+<<<<<<< HEAD
 .inputs > img,
 .newTaskContainer > img {
     width: 2em;
     height: 2em;
+=======
+.inputs > img, 
+.newTaskContainer > img{
+    height: 2em;
+    width: 2em;
+>>>>>>> test
 }
