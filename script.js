@@ -13,20 +13,9 @@ function addNewTaskToList(task) {
   newTask.setAttribute("readOnly", true);
 
   const editButton = document.createElement("img");
-<<<<<<< HEAD
   editButton.setAttribute("src", "icons/edit.png")
   editButton.classList.add("editButton");
   editButton.setAttribute("alt", "Edit");
-=======
-  editButton.setAttribute("src", "icons/edit.png");
-  editButton.setAttribute("alt", "Edit");
-  editButton.classList.add("editButton");
-
-  const deleteButton = document.createElement("img");
-  deleteButton.setAttribute("src", "icons/delete.png");
-  deleteButton.setAttribute("alt", "Delete");
-  deleteButton.classList.add("deleteButton");
->>>>>>> test
   
   const deleteButton = document.createElement("img");
   deleteButton.setAttribute("src", "icons/delete.png")

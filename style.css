@@ -82,15 +82,8 @@ h3 {
     width: max(30%, 80%);
 }
 
-<<<<<<< HEAD
 .inputs > img,
 .newTaskContainer > img {
     width: 2em;
     height: 2em;
-=======
-.inputs > img, 
-.newTaskContainer > img{
-    height: 2em;
-    width: 2em;
->>>>>>> test
 }
