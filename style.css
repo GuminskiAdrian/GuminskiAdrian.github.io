@@ -20,7 +20,6 @@ h1 {
     align-items: center;
     margin-inline: auto;
     width: 75vw;
-    border-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -34,8 +33,8 @@ h1 {
 
 .inputs * {
     margin-inline: 1em;
-    border-radius: 5px;
     font-size: 1em;
+    height: 1.5em;
 }
 
 #taskInput {
@@ -70,21 +69,12 @@ h3 {
     letter-spacing: 0.05em;
     border:none;
     border-bottom: 1px solid gray;
-    border-radius: 5px;
     text-align: center;
     width: max(30%, 80%);
 }
 
-.editButton,
-.deleteButton {
-    border-radius: 5px;
-    border: 1px dotted grey;
-}
-
-.editButton {
-    background-color: rgb(125, 184, 231);
-}
-
-.deleteButton {
-    background-color: rgb(226, 144, 144);
+.inputs > img, 
+.newTaskContainer > img{
+    height: 2em;
+    width: 2em;
 }

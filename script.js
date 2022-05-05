@@ -12,14 +12,14 @@ function addNewTaskToList(task) {
   newTask.classList.add("newTask");
   newTask.setAttribute("readOnly", true);
 
-  const editButton = document.createElement("input");
-  editButton.setAttribute("type", "button");
-  editButton.setAttribute("value", "Edit");
+  const editButton = document.createElement("img");
+  editButton.setAttribute("src", "icons/edit.png");
+  editButton.setAttribute("alt", "Edit");
   editButton.classList.add("editButton");
 
-  const deleteButton = document.createElement("input");
-  deleteButton.setAttribute("type", "button");
-  deleteButton.setAttribute("value", "Delete");
+  const deleteButton = document.createElement("img");
+  deleteButton.setAttribute("src", "icons/delete.png");
+  deleteButton.setAttribute("alt", "Delete");
   deleteButton.classList.add("deleteButton");
   
   newTaskContainer.appendChild(newTask);
@@ -32,13 +32,13 @@ function addNewTaskToList(task) {
   });
 
   editButton.addEventListener('click', function(){
-    if(editButton.value == "Edit"){
+    if(editButton.alt == "Edit"){
       newTask.removeAttribute("readonly");
-      editButton.setAttribute("value", "Save");
+      editButton.setAttribute("alt", "Save");
       newTask.style.backgroundColor = "rgb(175, 238, 186)";
     } else {
       newTask.setAttribute("readOnly", true);
-      editButton.setAttribute("value", "Edit");
+      editButton.setAttribute("alt", "Edit");
       newTask.style.backgroundColor = "white"
     }
   });
