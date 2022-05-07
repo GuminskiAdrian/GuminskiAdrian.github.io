@@ -42,11 +42,11 @@ function addNewTaskToList(task) {
     if(editButton.alt == "Edit"){
       newTask.removeAttribute("readonly");
       editButton.setAttribute("alt", "Save");
-      newTask.style.backgroundColor = "rgb(175, 238, 186)";
+      newTask.style.backgroundColor = "rgb(196, 240, 248)";
     } else {
       newTask.setAttribute("readOnly", true);
       editButton.setAttribute("alt", "Edit");
-      newTask.style.backgroundColor = "white"
+      newTask.style.backgroundColor = "white";
     }
   });
 
@@ -56,10 +56,12 @@ function addNewTaskToList(task) {
     if (counter == 0){
       checkBox.classList.add('checkedBox');
       newTask.classList.add('doneTask');
+      newTask.style.backgroundColor =  "rgb(66, 197, 66)";
       counter++;
     } else {
       checkBox.classList.remove('checkedBox');
       newTask.classList.remove('doneTask');
+      newTask.style.backgroundColor =  "white";
       counter--;
     }
   });
