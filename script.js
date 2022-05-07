@@ -6,11 +6,17 @@ function addNewTaskToList(task) {
   const newTaskContainer = document.createElement("div");
   newTaskContainer.classList.add("newTaskContainer");
   
+  const newTaskContainerBttn = document.createElement("div");
+  newTaskContainerBttn.classList.add("newTaskContainerBttn");
+
   const newTask = document.createElement("input");
   newTask.setAttribute("type", "text");
   newTask.setAttribute("value", task);
   newTask.classList.add("newTask");
   newTask.setAttribute("readOnly", true);
+
+  const checkBox = document.createElement("div");
+  checkBox.classList.add("checkBox");
 
   const editButton = document.createElement("img");
   editButton.setAttribute("src", "icons/edit.png")
@@ -21,9 +27,11 @@ function addNewTaskToList(task) {
   deleteButton.setAttribute("src", "icons/delete.png")
   deleteButton.classList.add("deleteButton");
 
+  newTaskContainer.appendChild(checkBox);
   newTaskContainer.appendChild(newTask);
-  newTaskContainer.appendChild(editButton);
-  newTaskContainer.appendChild(deleteButton);
+  newTaskContainerBttn.appendChild(editButton);
+  newTaskContainerBttn.appendChild(deleteButton);
+  newTaskContainer.appendChild(newTaskContainerBttn);
   list.appendChild(newTaskContainer);
 
   deleteButton.addEventListener('click', function(){
