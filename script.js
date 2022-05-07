@@ -49,6 +49,20 @@ function addNewTaskToList(task) {
       newTask.style.backgroundColor = "white"
     }
   });
+
+  let counter = 0;
+  checkBox.addEventListener('click', function(){
+    
+    if (counter == 0){
+      checkBox.classList.add('checkedBox');
+      newTask.classList.add('doneTask');
+      counter++;
+    } else {
+      checkBox.classList.remove('checkedBox');
+      newTask.classList.remove('doneTask');
+      counter--;
+    }
+  });
 }
 
 button.addEventListener("click", function(){
