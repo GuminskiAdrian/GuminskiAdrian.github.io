@@ -75,14 +75,6 @@ h3 {
 .checkBox {
     width: 1.75em;
     height: 1.75em;
-    border: 0.5px solid black;
-    display: block;
-    border-radius: 50%;
-}
-
-.checkedBox {
-    background-image: url("icons/checkMark.png");
-    background-size: cover;
 }
 
 .doneTask {

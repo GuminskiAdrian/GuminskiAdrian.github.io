@@ -1,32 +1,42 @@
 const button = document.querySelector("#taskButton");
 
 function addNewTaskToList(task) {
+  //getting taskList container
   const list = document.querySelector("#taskList");
-
+  
+  //creating container for new task
   const newTaskContainer = document.createElement("div");
   newTaskContainer.classList.add("newTaskContainer");
   
+  //container for edit and delete buttons
   const newTaskContainerBttn = document.createElement("div");
   newTaskContainerBttn.classList.add("newTaskContainerBttn");
 
+  //input with actual task to do
   const newTask = document.createElement("input");
   newTask.setAttribute("type", "text");
   newTask.setAttribute("value", task);
   newTask.classList.add("newTask");
   newTask.setAttribute("readOnly", true);
 
-  const checkBox = document.createElement("div");
+
+  //checbox for done tasks
+  const checkBox = document.createElement("input");
+  checkBox.setAttribute("type", "checkbox");
   checkBox.classList.add("checkBox");
 
+  //edit button
   const editButton = document.createElement("img");
   editButton.setAttribute("src", "icons/edit.png")
   editButton.classList.add("editButton");
   editButton.setAttribute("alt", "Edit");
   
+  //delete button
   const deleteButton = document.createElement("img");
   deleteButton.setAttribute("src", "icons/delete.png")
   deleteButton.classList.add("deleteButton");
 
+  //adding elements to DOM
   newTaskContainer.appendChild(checkBox);
   newTaskContainer.appendChild(newTask);
   newTaskContainerBttn.appendChild(editButton);
@@ -50,21 +60,16 @@ function addNewTaskToList(task) {
     }
   });
 
-  let counter = 0;
-  checkBox.addEventListener('click', function(){
-    
-    if (counter == 0){
-      checkBox.classList.add('checkedBox');
+  checkBox.addEventListener('change', function(){
+    if(checkBox.checked === true){
       newTask.classList.add('doneTask');
       newTask.style.backgroundColor =  "rgb(66, 197, 66)";
-      counter++;
     } else {
-      checkBox.classList.remove('checkedBox');
       newTask.classList.remove('doneTask');
       newTask.style.backgroundColor =  "white";
-      counter--;
     }
   });
+
 }
 
 button.addEventListener("click", function(){
@@ -75,9 +80,10 @@ button.addEventListener("click", function(){
 const save = document.querySelector("#listSaver");
 const reset = document.querySelector("#reset");
 
+//saving tasks in local storage
 save.addEventListener("click", function(){
   localStorage.clear();
-  // znalezienie wszystkich elementow z clasą newTask żeby potem pobrać ich wartości i wpisac je do local storage
+  //adding every item with 'newTask' class to local storage
   const tasks = document.getElementsByClassName("newTask");
 
   for(j = 0; j <tasks.length; j++){
@@ -87,6 +93,7 @@ save.addEventListener("click", function(){
   alert("Your list has been saved");
 });
 
+//clearing local storage and currently displayed task list
 reset.addEventListener("click", function(){
   localStorage.clear();
 
