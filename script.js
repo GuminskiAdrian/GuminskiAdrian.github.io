@@ -40,6 +40,7 @@ function addNewTaskToList(task, isChecked) {
   const deleteButton = document.createElement("img");
   deleteButton.setAttribute("src", "icons/delete.svg")
   deleteButton.classList.add("deleteButton");
+  deleteButton.setAttribute("alt", "Delete task button")
 
   //adding elements to DOM
   newTaskContainer.appendChild(checkBox);
