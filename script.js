@@ -32,13 +32,13 @@ function addNewTaskToList(task, isChecked) {
 
   //edit button
   const editButton = document.createElement("img");
-  editButton.setAttribute("src", "icons/edit.png")
+  editButton.setAttribute("src", "icons/edit.svg")
   editButton.classList.add("editButton");
   editButton.setAttribute("alt", "Edit");
   
   //delete button
   const deleteButton = document.createElement("img");
-  deleteButton.setAttribute("src", "icons/delete.png")
+  deleteButton.setAttribute("src", "icons/delete.svg")
   deleteButton.classList.add("deleteButton");
 
   //adding elements to DOM

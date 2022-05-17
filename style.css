@@ -1,10 +1,6 @@
 body {
     margin: 0;
     background-color: rgb(241, 241, 241);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h1 {
@@ -18,6 +14,7 @@ h1 {
 }
 
 .container {
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,19 +96,4 @@ h3 {
 .newTaskContainerBttn > img {
     width: 2em;
     height: 2em;
-}
-
-footer {
-    margin-top: auto;
-    background-color: rgb(247, 247, 247);
-    width: 100%;
-    height: 2em;
-    text-align: center;
-}
-
-footer > a {
-    text-decoration: none;
-    font-weight: 400;
-    color: rgb(59, 58, 58);
-    text-shadow: 0.5px 0.5px rgb(228, 228, 133);
 }
