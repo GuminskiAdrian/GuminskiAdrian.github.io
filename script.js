@@ -1,6 +1,6 @@
 const button = document.querySelector("#taskButton");
 
-function addNewTaskToList(task) {
+function addNewTaskToList(task, isChecked) {
   //getting taskList container
   const list = document.querySelector("#taskList");
   
@@ -19,10 +19,15 @@ function addNewTaskToList(task) {
   newTask.classList.add("newTask");
   newTask.setAttribute("readOnly", true);
 
-
-  //checbox for done tasks
+  //checbox
   const checkBox = document.createElement("input");
   checkBox.setAttribute("type", "checkbox");
+  //if task checbox is checked than add styles and class
+  if(isChecked == 1){
+    checkBox.setAttribute("checked", true);
+    newTask.classList.add('doneTask');
+    newTask.style.backgroundColor =  "rgb(66, 197, 66)";
+  }
   checkBox.classList.add("checkBox");
 
   //edit button
@@ -81,13 +86,22 @@ const save = document.querySelector("#listSaver");
 const reset = document.querySelector("#reset");
 
 //saving tasks in local storage
+
 save.addEventListener("click", function(){
   localStorage.clear();
   //adding every item with 'newTask' class to local storage
   const tasks = document.getElementsByClassName("newTask");
 
+  //every checked checkbox
+  const checkedBoxes = document.getElementsByClassName("checkBox");
+
   for(j = 0; j <tasks.length; j++){
     localStorage.setItem('taskNr'+j, tasks[j].value);
+
+    //checking whitch box in order is checked
+    if (checkedBoxes[j].checked == true) {
+      localStorage.setItem('taskChk'+j, j.toString());
+    }
   }
 
   alert("Your list has been saved");
