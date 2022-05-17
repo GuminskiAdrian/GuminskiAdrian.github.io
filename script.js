@@ -79,7 +79,8 @@ function addNewTaskToList(task, isChecked) {
 
 button.addEventListener("click", function(){
   const task = document.querySelector("#taskInput").value;
-  addNewTaskToList(task)
+  addNewTaskToList(task);
+  document.querySelector("#taskInput").value = '';
 });
 
 const save = document.querySelector("#listSaver");
