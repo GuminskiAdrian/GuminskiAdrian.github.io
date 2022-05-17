@@ -97,3 +97,8 @@ h3 {
     width: 2em;
     height: 2em;
 }
+
+.actionHolder > img:active,
+.newTaskContainerBttn > img:active {
+    transform: scale(0.8);
+}
