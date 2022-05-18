@@ -16,12 +16,13 @@ function addNewTaskToList(task, isChecked) {
   const newTask = document.createElement("input");
   newTask.setAttribute("type", "text");
   newTask.setAttribute("value", task);
-  newTask.classList.add("newTask");
   newTask.setAttribute("readOnly", true);
+  newTask.classList.add("newTask");
 
   //checbox
   const checkBox = document.createElement("input");
   checkBox.setAttribute("type", "checkbox");
+
   //if task checbox is checked than add styles and class
   if(isChecked == 1){
     checkBox.setAttribute("checked", true);
